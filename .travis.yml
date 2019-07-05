@@ -7,5 +7,5 @@ before_install:
   - docker build -t reactag -f Dockerfile.dev .
 
 script:
-  - docker run reactag npm run test -- --coverage
+  - docker run -e CI=true reactag npm run test -- --coverage
 
